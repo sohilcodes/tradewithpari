@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Trade With Pari | VIP Color Trading Signals & Predictions</title>
+
+  <!-- Google Font: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1410378120434453');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1410378120434453&ev=PageView&noscript=1" />
+  </noscript>
+  <!-- End Meta Pixel Code -->
+
+  <style>
+    :root {
+      --bg-dark: #08030f;
+      --card-bg: rgba(22, 11, 36, 0.75);
+      --card-border: rgba(255, 68, 153, 0.22);
+      --pink-neon: #ff2d87;
+      --purple-accent: #9b51e0;
+      --green-win: #00ff88;
+      --gold: #ffd15c;
+      --text-main: #ffffff;
+      --text-sub: #cfc2df;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(255, 45, 135, 0.22) 0%, transparent 60%),
+        radial-gradient(circle at 10% 40%, rgba(155, 81, 224, 0.16) 0%, transparent 50%),
+        radial-gradient(circle at 90% 70%, rgba(0, 255, 136, 0.1) 0%, transparent 45%);
+      color: var(--text-main);
+      min-height: 100vh;
+      padding-bottom: 110px;
+      overflow-x: hidden;
+      line-height: 1.5;
+    }
+
+    .wrapper {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 16px 14px;
+    }
+
+    /* Top Live Urgency Header */
+    .top-strip {
+      background: linear-gradient(90deg, rgba(255, 45, 135, 0.25), rgba(155, 81, 224, 0.25));
+      border: 1px solid rgba(255, 45, 135, 0.4);
+      border-radius: 50px;
+      padding: 8px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 11.5px;
+      font-weight: 700;
+      margin-bottom: 14px;
+      backdrop-filter: blur(10px);
+    }
+
+    .live-dot {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--green-win);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .live-dot::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: var(--green-win);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--green-win);
+      animation: pulseDot 1.2s infinite ease-in-out;
+    }
+
+    @keyframes pulseDot {
+      0% { transform: scale(0.9); opacity: 1; }
+      50% { transform: scale(1.35); opacity: 0.4; }
+      100% { transform: scale(0.9); opacity: 1; }
+    }
+
+    .session-timer {
+      color: #ffb8df;
+      font-family: monospace;
+      font-size: 12.5px;
+      font-weight: 800;
+    }
+
+    /* Hero Section Card */
+    .hero-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      backdrop-filter: blur(20px);
+      border-radius: 26px;
+      padding: 24px 18px;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 16px 45px rgba(255, 45, 135, 0.14);
+      margin-bottom: 16px;
+    }
+
+    .pari-avatar-box {
+      position: relative;
+      width: 96px;
+      height: 96px;
+      margin: 0 auto 12px;
+    }
+
+    .avatar-halo {
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--pink-neon), var(--purple-accent), var(--green-win));
+      animation: rotateGlow 6s linear infinite;
+      filter: blur(4px);
+    }
+
+    @keyframes rotateGlow {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .avatar-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: #190924;
+      border: 3px solid #08030f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 42px;
+      z-index: 2;
+    }
+
+    .verified-mark {
+      position: absolute;
+      bottom: 2px;
+      right: 4px;
+      background: #0088cc;
+      color: white;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      border: 2px solid #08030f;
+      z-index: 3;
+    }
+
+    h1.brand-title {
+      font-size: 26px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      background: linear-gradient(90deg, #ffffff 10%, #ff80bf 60%, #ffd15c 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 4px;
+    }
+
+    .sub-brand {
+      font-size: 13px;
+      color: var(--text-sub);
+      margin-bottom: 16px;
+    }
+
+    /* Key Statistics Bar */
+    .stats-bar {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 8px;
+      background: rgba(0, 0, 0, 0.45);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 18px;
+      padding: 12px 6px;
+      margin-bottom: 18px;
+    }
+
+    .stat-box {
+      text-align: center;
+    }
+
+    .stat-val {
+      font-size: 17px;
+      font-weight: 900;
+      color: var(--green-win);
+      text-shadow: 0 0 10px rgba(0, 255, 136, 0.35);
+    }
+
+    .stat-lbl {
+      font-size: 10px;
+      color: #9d8fb2;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-top: 2px;
+    }
+
+    /* Primary Telegram Buttons */
+    .cta-main {
+      width: 100%;
+      background: linear-gradient(135deg, #00d26a 0%, #00b05b 100%);
+      color: #012812;
+      border: none;
+      outline: none;
+      border-radius: 50px;
+      padding: 16px 20px;
+      font-size: 16px;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 10px 30px rgba(0, 210, 106, 0.45), inset 0 1px 2px rgba(255, 255, 255, 0.5);
+      animation: pulseBtn 2s infinite ease-in-out;
+      transition: transform 0.15s ease;
+    }
+
+    .cta-main:active {
+      transform: scale(0.97);
+    }
+
+    @keyframes pulseBtn {
+      0% { box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.6); }
+      70% { box-shadow: 0 0 0 16px rgba(0, 255, 136, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(0, 255, 136, 0); }
+    }
+
+    .cta-subtext {
+      font-size: 11px;
+      color: #9d8fb2;
+      margin-top: 8px;
+    }
+
+    /* Live Prediction Simulator Card */
+    .preview-card {
+      background: rgba(18, 9, 31, 0.85);
+      border: 1px solid rgba(255, 45, 135, 0.3);
+      border-radius: 20px;
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .preview-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 10px;
+      margin-bottom: 12px;
+      font-size: 12px;
+    }
+
+    .badge-win {
+      background: rgba(0, 255, 136, 0.15);
+      border: 1px solid var(--green-win);
+      color: var(--green-win);
+      font-size: 10.5px;
+      font-weight: 800;
+      padding: 3px 9px;
+      border-radius: 20px;
+    }
+
+    .prediction-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 14px;
+      padding: 10px 14px;
+      margin-bottom: 10px;
+    }
+
+    .color-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    .circle-green {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #00ff88;
+      box-shadow: 0 0 8px #00ff88;
+    }
+
+    .circle-violet {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #9b51e0;
+      box-shadow: 0 0 8px #9b51e0;
+    }
+
+    .profit-amt {
+      color: var(--green-win);
+      font-weight: 800;
+      font-size: 15px;
+    }
+
+    /* Benefits List */
+    .benefit-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 14px;
+      padding: 12px;
+      margin-bottom: 8px;
+    }
+
+    .benefit-icon {
+      font-size: 20px;
+      line-height: 1;
+      padding-top: 2px;
+    }
+
+    .benefit-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .benefit-desc {
+      font-size: 11.5px;
+      color: var(--text-sub);
+    }
+
+    /* Risk Disclaimer / Loss Recovery Banner */
+    .recovery-banner {
+      background: linear-gradient(135deg, rgba(255, 45, 135, 0.15), rgba(155, 81, 224, 0.12));
+      border: 1px dashed rgba(255, 45, 135, 0.5);
+      border-radius: 16px;
+      padding: 14px;
+      text-align: center;
+      margin-top: 14px;
+      margin-bottom: 20px;
+    }
+
+    .recovery-banner h4 {
+      font-size: 13.5px;
+      color: #ff99cc;
+      margin-bottom: 4px;
+      font-weight: 800;
+    }
+
+    .recovery-banner p {
+      font-size: 11.5px;
+      color: #ddd0ea;
+    }
+
+    .toast-overlay {
+      position: fixed;
+      bottom: 88px;
+      left: 12px;
+      right: 12px;
+      max-width: 440px;
+      margin: 0 auto;
+      z-index: 9999;
+      pointer-events: none;
+    }
+
+    .toast-card {
+      background: rgba(18, 9, 28, 0.95);
+      border: 1.5px solid rgba(0, 255, 136, 0.45);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 255, 136, 0.18);
+      backdrop-filter: blur(16px);
+      border-radius: 18px;
+      padding: 12px 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transform: translateY(60px) scale(0.9);
+      opacity: 0;
+      transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+      pointer-events: auto;
+    }
+
+    .toast-card.active {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+
+    .toast-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--pink-neon), var(--purple-accent));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 16px;
+      color: #fff;
+      flex-shrink: 0;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .toast-details {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .toast-top-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2px;
+    }
+
+    .toast-user {
+      font-weight: 800;
+      font-size: 13px;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .toast-time {
+      font-size: 10px;
+      color: #a496b9;
+      font-weight: 600;
+    }
+
+    .toast-profit {
+      color: var(--green-win);
+      font-size: 12.5px;
+      font-weight: 800;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .toast-city {
+      font-size: 10px;
+      color: #8c7f9f;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* Fixed Sticky Bottom Mobile Bar */
+    .sticky-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(9, 3, 16, 0.94);
+      border-top: 1px solid rgba(255, 45, 135, 0.25);
+      backdrop-filter: blur(14px);
+      padding: 12px 14px;
+      z-index: 999;
+      display: flex;
+      justify-content: center;
+    }
+
+    .sticky-bar .cta-main {
+      max-width: 480px;
+      padding: 14px 18px;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+
+    <!-- Urgency Top Bar -->
+    <div class="top-strip">
+      <div class="live-dot">VIP SESSION ACTIVE</div>
+      <div>Round closes in: <span id="countdown" class="session-timer">04:42</span></div>
+    </div>
+
+    <!-- Pari Main Channel Profile -->
+    <div class="hero-card">
+      <div class="pari-avatar-box">
+        <div class="avatar-halo"></div>
+        <div class="avatar-inner">👸🏻</div>
+        <div class="verified-mark">✓</div>
+      </div>
+
+      <h1 class="brand-title">Trade With Pari</h1>
+      <p class="sub-brand">👑 India's Most Trusted Female Color Prediction Expert</p>
+
+      <!-- Statistics -->
+      <div class="stats-bar">
+        <div class="stat-box">
+          <div class="stat-val">98.6%</div>
+          <div class="stat-lbl">Win Ratio</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-val">52K+</div>
+          <div class="stat-lbl">VIP Fam</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-val">3-5 Daily</div>
+          <div class="stat-lbl">Sure Shots</div>
+        </div>
+      </div>
+
+      <!-- Main CTA Button -->
+      <button class="cta-main" onclick="handleTelegramRedirect()">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="22" y1="2" x2="11" y2="13"></line>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+        </svg>
+        JOIN TELEGRAM FOR FREE
+      </button>
+      <div class="cta-subtext">🔒 100% Free VIP Entry • No Hidden Charges</div>
+    </div>
+
+    <!-- Live Prediction Snapshot Card -->
+    <div class="preview-card">
+      <div class="preview-header">
+        <span style="font-weight: 700; color: #ffb3d9;">⚡ LIVE VIP RESULT PROOF</span>
+        <span class="badge-win">PASSED (LEVEL 1)</span>
+      </div>
+
+      <div class="prediction-row">
+        <div>
+          <div style="font-size: 10px; color: #a596bb;">PERIOD #2026092301</div>
+          <div class="color-tag" style="color: #00ff88;">
+            <span class="circle-green"></span> GREEN + <span class="circle-violet"></span> VIOLET
+          </div>
+        </div>
+        <div class="profit-amt">+₹9,450 WON</div>
+      </div>
+
+      <div class="prediction-row">
+        <div>
+          <div style="font-size: 10px; color: #a596bb;">PERIOD #2026092302</div>
+          <div class="color-tag" style="color: #00ff88;">
+            <span class="circle-green"></span> GREEN SURE SHOT
+          </div>
+        </div>
+        <div class="profit-amt">+₹14,200 WON</div>
+      </div>
+
+      <div style="text-align: center; font-size: 11px; color: #d6cae6; margin-top: 6px;">
+        ✅ Pari Mam ke 3-Level plan se risk 0% aur full profit guarantee.
+      </div>
+    </div>
+
+    <!-- Feature Highlights -->
+    <div class="benefit-item">
+      <div class="benefit-icon">🎯</div>
+      <div>
+        <div class="benefit-title">Daily 3-5 Guaranteed Sure Shots</div>
+        <div class="benefit-desc">Live time predictions with high-accuracy algorithmic pattern analysis.</div>
+      </div>
+    </div>
+
+    <div class="benefit-item">
+      <div class="benefit-icon">💸</div>
+      <div>
+        <div class="benefit-title">Instant UPI & Bank Withdrawals</div>
+        <div class="benefit-desc">Live payment screenshots & withdrawal proofs updated every session.</div>
+      </div>
+    </div>
+
+    <div class="benefit-item">
+      <div class="benefit-icon">👩‍💼</div>
+      <div>
+        <div class="benefit-title">Personal Loss Recovery Support</div>
+        <div class="benefit-desc">Agar pehle kabhi loss hua hai toh Pari mam ka dedicated guide follow karein.</div>
+      </div>
+    </div>
+
+    <!-- Recovery Guarantee Box -->
+    <div class="recovery-banner">
+      <h4>🚨 Old Loss Recovery Special Group</h4>
+      <p>Jo users already loss me hain, unhe customized funds management guide di jaati hai taaki 3 se 5 din me capital safe ho sake.</p>
+    </div>
+
+    <!-- Secondary Big CTA -->
+    <button class="cta-main" onclick="handleTelegramRedirect()" style="margin-bottom: 24px;">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="22" y1="2" x2="11" y2="13"></line>
+        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+      </svg>
+      CLICK TO ENTER VIP GROUP
+    </button>
+  </div>
+
+  <!-- Mobile Sticky Bar -->
+  <div class="sticky-bar">
+    <button class="cta-main" onclick="handleTelegramRedirect()">
+      👉 JOIN TRADE WITH PARI (FREE)
+    </button>
+  </div>
+
+  <!-- Live Toast Notification Container -->
+  <div class="toast-overlay">
+    <div id="liveToast" class="toast-card">
+      <div id="toastAvatar" class="toast-avatar">P</div>
+      <div class="toast-details">
+        <div class="toast-top-line">
+          <div id="toastName" class="toast-user">Pooja V. <span style="color:#00ff88; font-size:11px;">✓</span></div>
+          <div id="toastTime" class="toast-time">Just now</div>
+        </div>
+        <div id="toastProfit" class="toast-profit">Won ₹8,400 with Pari Mam!</div>
+        <div id="toastCity" class="toast-city">Verified Member • Surat</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // -------------------------------------------------------------
+    // TELEGRAM LINK CONFIGURATION
+    // Apna official channel link yaha replace karein:
+    // -------------------------------------------------------------
+    const TELEGRAM_INVITE_URL = "https://t.me/+jkOJgKSPxR4yNDRl";
+
+    // Meta Ads Lead Conversion Event
+    function handleTelegramRedirect() {
+      try {
+        if (typeof fbq === 'function') {
+          fbq('track', 'Lead', {
+            content_name: 'Trade With Pari - VIP Telegram',
+            content_category: 'Color Trading Signals',
+            value: 1.00,
+            currency: 'INR'
+          });
+        }
+      } catch (err) {
+        console.error("Meta Pixel tracking error:", err);
+      }
+
+      // Smooth transition to Telegram
+      setTimeout(function() {
+        window.location.href = TELEGRAM_INVITE_URL;
+      }, 250);
+    }
+
+    // Dynamic Urgency Countdown Timer (Minutes:Seconds)
+    let totalSeconds = 282; // 4 mins 42 secs
+    const timerDisplay = document.getElementById('countdown');
+    setInterval(function() {
+      if (totalSeconds <= 15) {
+        totalSeconds = 300; // Reset loop
+      } else {
+        totalSeconds--;
+      }
+      const mins = Math.floor(totalSeconds / 60);
+      const secs = totalSeconds % 60;
+      timerDisplay.innerText = 
+        (mins < 10 ? "0" + mins : mins) + ":" + (secs < 10 ? "0" + secs : secs);
+    }, 1000);
+
+    // -------------------------------------------------------------
+    // AUTOMATIC SIDE FEEDBACKS / PROOF POPUPS
+    // -------------------------------------------------------------
+    const realFeedbacks = [
+      { name: "Sneha Patel", city: "Ahmedabad", amount: "₹9,800 Profit credited to Bank", time: "Just now" },
+      { name: "Vikram Rathore", city: "Jaipur", amount: "Recovered ₹24,000 loss in 3 days! 🙏", time: "1m ago" },
+      { name: "Rahul Verma", city: "Indore", amount: "₹14,500 Withdrawal Success ✅", time: "Just now" },
+      { name: "Pooja Sharma", city: "Surat", amount: "Pari Mam is best! Won ₹6,200", time: "Just now" },
+      { name: "Amit Deshmukh", city: "Nagpur", amount: "5 out of 5 Sure Shots Win 🔥", time: "2m ago" },
+      { name: "Sunil Yadav", city: "Lucknow", amount: "₹32,000 VIP session payout done", time: "Just now" },
+      { name: "Kavita R.", city: "Delhi NCR", amount: "Level 1 passed! Won ₹8,900", time: "1m ago" },
+      { name: "Harpreet Singh", city: "Ludhiana", amount: "Loss recovery plan 100% working", time: "Just now" }
+    ];
+
+    const toastElement = document.getElementById("liveToast");
+    const nameEl = document.getElementById("toastName");
+    const profitEl = document.getElementById("toastProfit");
+    const cityEl = document.getElementById("toastCity");
+    const timeEl = document.getElementById("toastTime");
+    const avatarEl = document.getElementById("toastAvatar");
+
+    let lastIndex = -1;
+
+    function showRandomFeedback() {
+      let randomIndex;
+      do {
+        randomIndex = Math.floor(Math.random() * realFeedbacks.length);
+      } while (randomIndex === lastIndex);
+      lastIndex = randomIndex;
+
+      const item = realFeedbacks[randomIndex];
+
+      nameEl.innerHTML = item.name + ' <span style="color:#00ff88; font-size:11px;">✓</span>';
+      profitEl.innerText = item.amount;
+      cityEl.innerText = "Verified Member • " + item.city;
+      timeEl.innerText = item.time;
+      avatarEl.innerText = item.name.charAt(0);
+
+      // Slide in from bottom/side
+      toastElement.classList.add("active");
+
+      // Slide out after 4.2 seconds
+      setTimeout(function() {
+        toastElement.classList.remove("active");
+      }, 4200);
+    }
+
+    // Trigger right after user opens (1.5 seconds delay)
+    setTimeout(function() {
+      showRandomFeedback();
+
+      // Recurring popups every 7.5 seconds
+      setInterval(function() {
+        showRandomFeedback();
+      }, 7500);
+    }, 1500);
+  </script>
+</body>
+</html>
