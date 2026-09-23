@@ -131,18 +131,18 @@
 
     .pari-avatar-box {
       position: relative;
-      width: 96px;
-      height: 96px;
-      margin: 0 auto 12px;
+      width: 124px;
+      height: 124px;
+      margin: 0 auto 16px;
     }
 
     .avatar-halo {
       position: absolute;
-      inset: -4px;
+      inset: -6px;
       border-radius: 50%;
       background: linear-gradient(135deg, var(--pink-neon), var(--purple-accent), var(--green-win));
-      animation: rotateGlow 6s linear infinite;
-      filter: blur(4px);
+      animation: rotateGlow 5s linear infinite;
+      filter: blur(6px);
     }
 
     @keyframes rotateGlow {
@@ -156,13 +156,14 @@
       height: 100%;
       border-radius: 50%;
       background: #190924;
-      border: 3px solid #08030f;
+      border: 3.5px solid #08030f;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 42px;
+      font-size: 52px;
       z-index: 2;
       overflow: hidden;
+      box-shadow: inset 0 0 15px rgba(255, 45, 135, 0.4);
     }
 
     .avatar-img {
@@ -175,23 +176,67 @@
 
     .verified-mark {
       position: absolute;
-      bottom: 2px;
-      right: 4px;
+      bottom: 4px;
+      right: 6px;
       background: #0088cc;
       color: white;
       border-radius: 50%;
-      width: 24px;
-      height: 24px;
+      width: 28px;
+      height: 28px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 13px;
-      border: 2px solid #08030f;
+      font-size: 15px;
+      border: 2.5px solid #08030f;
       z-index: 3;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    }
+
+    /* Auto-redirect status indicator */
+    .redirect-box {
+      background: rgba(0, 255, 136, 0.08);
+      border: 1px solid rgba(0, 255, 136, 0.3);
+      border-radius: 12px;
+      padding: 10px 14px;
+      margin-bottom: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .redirect-text {
+      font-size: 12px;
+      font-weight: 700;
+      color: #9effc7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .redirect-track {
+      width: 100%;
+      height: 5px;
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .redirect-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #00d26a, #00ff88);
+      border-radius: 10px;
+      animation: fillBar 3s linear forwards;
+    }
+
+    @keyframes fillBar {
+      0% { width: 0%; }
+      100% { width: 100%; }
     }
 
     h1.brand-title {
-      font-size: 26px;
+      font-size: 27px;
       font-weight: 900;
       letter-spacing: -0.5px;
       background: linear-gradient(90deg, #ffffff 10%, #ff80bf 60%, #ffd15c 100%);
@@ -397,7 +442,6 @@
       color: #ddd0ea;
     }
 
-    /* Fixed Side/Bottom Notification Toasts */
     .toast-overlay {
       position: fixed;
       bottom: 88px;
@@ -534,6 +578,16 @@
       <h1 class="brand-title">Trade With Pari</h1>
       <p class="sub-brand">👑 India's Most Trusted Female Color Prediction Expert</p>
 
+      <!-- Auto Redirect Countdown Visualizer -->
+      <div class="redirect-box">
+        <div class="redirect-text">
+          <span>⚡ Redirecting to VIP Telegram in <b id="redirectTimer" style="color:#00ff88; font-size:14px;">3</b>s...</span>
+        </div>
+        <div class="redirect-track">
+          <div class="redirect-fill"></div>
+        </div>
+      </div>
+
       <!-- Statistics -->
       <div class="stats-bar">
         <div class="stat-box">
@@ -661,9 +715,13 @@
     // TELEGRAM LINK CONFIGURATION
     // -------------------------------------------------------------
     const TELEGRAM_INVITE_URL = "https://t.me/+jkOJgKSPxR4yNDRl";
+    let isRedirecting = false;
 
     // Meta Ads Lead Conversion Event
     function handleTelegramRedirect() {
+      if (isRedirecting) return;
+      isRedirecting = true;
+
       try {
         if (typeof fbq === 'function') {
           fbq('track', 'Lead', {
@@ -677,11 +735,25 @@
         console.error("Meta Pixel tracking error:", err);
       }
 
-      // Smooth transition to Telegram
+      // Transition to Telegram
       setTimeout(function() {
         window.location.href = TELEGRAM_INVITE_URL;
-      }, 250);
+      }, 150);
     }
+
+    let redirectSecondsLeft = 3;
+    const redirectTimerEl = document.getElementById('redirectTimer');
+
+    const redirectInterval = setInterval(function() {
+      redirectSecondsLeft--;
+      if (redirectTimerEl && redirectSecondsLeft >= 0) {
+        redirectTimerEl.innerText = redirectSecondsLeft;
+      }
+      if (redirectSecondsLeft <= 0) {
+        clearInterval(redirectInterval);
+        handleTelegramRedirect();
+      }
+    }, 1000);
 
     // Dynamic Urgency Countdown Timer (Minutes:Seconds)
     let totalSeconds = 282; // 4 mins 42 secs
@@ -745,7 +817,7 @@
       }, 4200);
     }
 
-    // Trigger right after user opens (1.5 seconds delay)
+    // Trigger right after user opens (1.2 seconds delay)
     setTimeout(function() {
       showRandomFeedback();
 
@@ -753,7 +825,7 @@
       setInterval(function() {
         showRandomFeedback();
       }, 7500);
-    }, 1500);
+    }, 1200);
   </script>
 </body>
 </html>
